@@ -1,0 +1,91 @@
+.banner {
+	top: 8vh;
+}
+
+.shadow {
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.bg-default2 {
+	background-color: #172b4d;
+}
+
+.headroom2 {
+	background: #172b4d !important;
+}
+
+.text-default2 {
+	color: #3A5D98;
+}
+
+.bg-secondary2 {
+	background-color: #F1F5F9;
+}
+
+.divider {
+	border: 0;
+	border-top: 1px solid #e6e6e6;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 100%;
+	height: 1px;
+}
+
+.cover {
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	margin-top: 15px;
+	height: 210px;
+	border-radius: 5px;
+}
+
+.container-md {
+	max-width: 54%;
+	margin: 0 auto;
+}
+
+.border-rounded {
+	border-radius: 8px;
+}
+
+.circle {
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+	.banner {
+		top: 8vh;
+		margin-bottom: 20vh;
+	}
+
+	.container-md {
+		max-width: 90%;
+		margin: 0 auto;
+	}
+
+	.divider {
+		margin-bottom: 15px;
+	}
+}
+
+@media screen and (max-width: 1440px) {
+	.container-md {
+		max-width: 80%;
+		margin: 0 auto;
+	}
+}
+
+
+@media screen and (max-width: 1440px) {
+	.container-md {
+		max-width: 80%;
+		margin: 0 auto;
+	}
+}
