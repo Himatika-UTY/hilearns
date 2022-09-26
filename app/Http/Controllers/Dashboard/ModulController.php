@@ -29,9 +29,9 @@ class ModulController extends Controller
 	public function create_save(Request $request)
 	{
 		$request->validate([
-			'category' => 'required',
+			'category' => 'required|exists:category,id',
 			'name' => 'required|string|max:255|unique:modul',
-			'slug' => 'required|string|max:255|unique:modul',
+			'slug' => 'required|string|max:255|unique:modul|alpha_dash|min:3',
 			'level' => 'required',
 			'description' => 'required',
 			'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
@@ -65,10 +65,10 @@ class ModulController extends Controller
 	{
 		$oldData = Modul::find($id);
 		$rules_name = $request->name == $oldData->name ? 'required|string|max:255' : 'required|string|max:255|unique:modul';
-		$rules_slug = $request->slug == $oldData->slug ? 'required|string|max:255' : 'required|string|max:255|unique:modul';
+		$rules_slug = $request->slug == $oldData->slug ? 'required|string|max:255|alpha_dash|min:3' : 'required|string|max:255|unique:modul|alpha_dash|min:3';
 
 		$request->validate([
-			'category' => 'required',
+			'category' => 'required|exists:category,id',
 			'name' => $rules_name,
 			'slug' => $rules_slug,
 			'level' => 'required',

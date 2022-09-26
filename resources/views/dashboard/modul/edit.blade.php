@@ -13,7 +13,7 @@
 		</div>
 		@endif
 
-		<div class="col-8">
+		<div class="col-md-8">
 			<div class="card mb-4">
 				<div class="card-header pb-0">
 					<div class="row">
@@ -53,14 +53,17 @@
 								<div class="col-md-6">
 									<div class="form-group">
 										<label class="form-control-label">Slug</label>
-										<input class="form-control" type="text" name="slug" value="{{ old('slug') ? old('slug') : $modul->slug }}" autocomplete="off" required>
+										<div class="input-group">
+											<span class="input-group-text">/</span>
+											<input class="form-control" type="text" name="slug" value="{{ old('slug') ? old('slug') : $modul->slug }}" autocomplete="off" required>
+										</div>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
 										<label class="form-control-label">Image</label>
 										<input class="form-control" type="file" name="image" value="{{ old('image') ? old('image') : $modul->image }}" autocomplete="off">
-										<div class="form-text">*Image tidak wajib diganti</div>
+										<div class="form-text text-danger">*Kosongkan jika tidak ingin mengganti image</div>
 									</div>
 								</div>
 							</div>

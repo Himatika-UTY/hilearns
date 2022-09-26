@@ -27,7 +27,7 @@ class CategoryController extends Controller
 	{
 		$request->validate([
 			'name' => 'required|string|max:255|unique:category',
-			'slug' => 'required|string|max:255|unique:category',
+			'slug' => 'required|string|max:255|unique:category|alpha_dash|min:3',
 			'description' => 'required|string',
 			'icon' => 'required|string',
 			'color' => 'required|string',
@@ -56,7 +56,7 @@ class CategoryController extends Controller
 	{
 		$oldData = Category::find($id);
 		$rules_name = $request->name == $oldData->name ? 'required|string|max:255' : 'required|string|max:255|unique:category';
-		$rules_slug = $request->slug == $oldData->slug ? 'required|string|max:255' : 'required|string|max:255|unique:category';
+		$rules_slug = $request->slug == $oldData->slug ? 'required|string|max:255|alpha_dash|min:3' : 'required|string|max:255|unique:category|alpha_dash|min:3';
 
 		$request->validate([
 			 'name' => $rules_name,

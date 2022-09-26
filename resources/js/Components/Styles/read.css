@@ -1,0 +1,21 @@
+#content pre {
+	background-color: #282a36;
+	color: #f8f8f2;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+#content pre .hljs-tag {
+	color: aqua;
+}
+
+#content p {
+	color: #172b4d;
+	font-size: 1.1rem;
+	font-weight: 400;
+}
+
+#content img {
+	max-width: 100%;
+}
+

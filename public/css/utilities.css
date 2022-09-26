@@ -1,5 +1,5 @@
 .banner {
-	top: 8vh;
+	top: 7vh;
 }
 
 .shadow {
@@ -45,6 +45,11 @@
 	margin: 0 auto;
 }
 
+.container-detail {
+	max-width: 60%;
+	margin: 0 auto;
+}
+
 .border-rounded {
 	border-radius: 8px;
 }
@@ -61,12 +66,12 @@
 
 @media screen and (max-width: 768px) {
 	.banner {
-		top: 8vh;
+		top: 6vh;
 		margin-bottom: 20vh;
 	}
 
-	.container-md {
-		max-width: 90%;
+	.container-md, .container-detail {
+		max-width: 100%;
 		margin: 0 auto;
 	}
 
@@ -76,7 +81,7 @@
 }
 
 @media screen and (max-width: 1440px) {
-	.container-md {
+	.container-md, .container-detail {
 		max-width: 80%;
 		margin: 0 auto;
 	}
@@ -84,7 +89,7 @@
 
 
 @media screen and (max-width: 1440px) {
-	.container-md {
+	.container-md, .container-detail {
 		max-width: 80%;
 		margin: 0 auto;
 	}

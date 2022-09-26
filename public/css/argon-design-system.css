@@ -4986,7 +4986,6 @@ input[type="button"].btn-block {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1rem;
 }
 
 .navbar>.container,
@@ -23050,33 +23049,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .input-slider-value-output.right:after {
   right: 10px;
   left: auto;
-}
-
-.headroom {
-  will-change: transform;
-  background-color: inherit;
-  transition: all 0.15s ease;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .headroom {
-    transition: none;
-  }
-}
-
-.headroom--pinned {
-  transform: translateY(0%);
-}
-
-.headroom--unpinned {
-  transform: translateY(-100%);
-}
-
-.headroom--not-top {
-  padding-top: .5rem;
-  padding-bottom: .5rem;
-  background: #172b4d !important;
-  box-shadow: 0 1px 10px rgba(130, 130, 134, 0.1);
 }
 
 .ct-clipboard {

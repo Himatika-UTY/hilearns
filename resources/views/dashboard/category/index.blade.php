@@ -14,7 +14,7 @@
 				</div>
 			</div>
 		@endif
-		<div class="col-12">
+		<div class="col-md-12">
 			<div class="card mb-4">
 				<div class="card-header pb-0">
 					<div class="row">
@@ -45,7 +45,7 @@
 									<tr>
 										<td>{{ $category->id }}</td>
 										<td>{{ $category->name }}</td>
-										<td>{{ $category->slug }}</td>
+										<td>/{{ $category->slug }}</td>
 										<td>{{ Str::of($category->description)->limit(50) }}</td>
 										<td>{{ $category->icon }}</td>
 										<td>{{ $category->color }}</td>

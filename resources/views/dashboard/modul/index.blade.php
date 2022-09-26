@@ -14,7 +14,7 @@
 				</div>
 			</div>
 		@endif
-		<div class="col-12">
+		<div class="col-md-12">
 			<div class="card mb-4">
 				<div class="card-header pb-0">
 					<div class="row">
@@ -46,7 +46,7 @@
 									<tr>
 										<td>{{ $modul->id }}</td>
 										<td>{{ $modul->name }}</td>
-										<td>{{ $modul->slug }}</td>
+										<td>/{{ $modul->slug }}</td>
 										<td>{{ $modul->level }}</td>
 										<td>{{ $modul->category->name }}</td>
 										<td>{{ Str::of($modul->description)->limit(50) }}</td>

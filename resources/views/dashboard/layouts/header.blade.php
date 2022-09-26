@@ -11,7 +11,7 @@
         <li class="nav-item d-flex align-items-center">
           <a href="#" class="nav-link text-white font-weight-bold px-0">
             <i class="fa fa-user me-sm-1"></i>
-            <span class="d-sm-inline d-none">Username</span>
+            <span class="d-sm-inline d-none">{{ $jwt->fullname }}</span>
           </a>
         </li>
         <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
@@ -27,7 +27,7 @@
          
         </li>
         <li class="nav-item pe-2 d-flex align-items-center">
-          <form method="POST" action="/logout">
+          <form method="POST" action="{{ route('logout') }}">
             @csrf
             <button class="nav-link text-white p-0" style="border: none;background: none;">
               <i class="fa-solid fa-right-from-bracket fixed-plugin-button-nav cursor-pointer"></i>
