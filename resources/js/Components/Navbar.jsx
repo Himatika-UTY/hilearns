@@ -56,6 +56,15 @@ const Navbar = () => {
 		
 					<ul className="navbar-nav align-items-lg-center ml-lg-auto">
 						<li className="nav-item">
+                     <Link className="nav-link nav-link-icon" href={route('search')} data-toggle="tooltip" title="Search Article">
+                        <i className="fas fa-search"></i>
+                        <span className="nav-link-inner--text d-lg-none">
+                           Search
+                        </span>
+                     </Link>
+                  </li>
+
+						<li className="nav-item">
 							<a className="nav-link nav-link-icon" href="https://www.instagram.com/himatikauty" target="_blank" data-toggle="tooltip" title="Follow us on Instagram">
 								<i className="fa-brands fa-instagram"></i>
 								<span className="nav-link-inner--text d-lg-none">
@@ -94,4 +103,4 @@ const Navbar = () => {
 	);
 }
 	
-export default Navbar
+export default Navbar;

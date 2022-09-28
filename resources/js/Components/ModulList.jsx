@@ -1,8 +1,5 @@
 import { Link } from "@inertiajs/inertia-react";
-
-const getImage = (image) => {
-	return `/upload/modul/${image}`;
-}
+import ModuleImage from "../Helpers/ModuleImage";
 
 const ModulList = ({ moduls }) => {
 	return (
@@ -13,7 +10,7 @@ const ModulList = ({ moduls }) => {
 						<div className="card card-lift--hover shadow border-0 rounded align-content-center">
 							<div className="card-body py-3 px-3 tutorial-flex">
 								<div className="w-auto">
-									<img src={getImage(modul.image)} className="tutorial-image-lg" alt="Responsive image" />
+									<img src={ModuleImage(modul.image)} className="tutorial-image-lg" alt="Responsive image" />
 								</div>
 								<div className="tutorial-desc-lg">
 									<span className="font-weight-900 tutorial-title-lg text-default">{modul.name}</span>
@@ -28,4 +25,4 @@ const ModulList = ({ moduls }) => {
 	);
 }
 
-export default ModulList
+export default ModulList;

@@ -1,49 +1,103 @@
-const Footer = () => {
+import { Link } from "@inertiajs/inertia-react";
+
+const Footer = ({ articles }) => {
 	return (
 		<footer className="footer mt-5" style={{ backgroundColor: '#172b4d' }}>
 			<div className="container-fluid mt-4">
-				<div className="row row-grid align-items-center mb-5">
-					<div className="col-lg-6">
-						<h3 className="text-primary font-weight-light mb-2">Thank you for supporting us!</h3>
-						<h4 className="mb-0 font-weight-light text-white">Let's get in touch on any of these platforms.</h4>
-					</div>
-					<div className="col-lg-6 text-lg-center btn-wrapper">
-						<button target="_blank" href="https://twitter.com/creativetim" rel="nofollow" className="btn btn-icon-only btn-twitter rounded-circle" data-toggle="tooltip" data-original-title="Follow us">
-							<span className="btn-inner--icon"><i className="fa fa-twitter"></i></span>
-						</button>
-						<button target="_blank" href="https://www.facebook.com/CreativeTim/" rel="nofollow" className="btn-icon-only rounded-circle btn btn-facebook" data-toggle="tooltip" data-original-title="Like us">
-							<span className="btn-inner--icon"><i className="fab fa-facebook"></i></span>
-						</button>
-						<button target="_blank" href="https://dribbble.com/creativetim" rel="nofollow" className="btn btn-icon-only btn-dribbble rounded-circle" data-toggle="tooltip" data-original-title="Follow us">
-							<span className="btn-inner--icon"><i className="fa fa-dribbble"></i></span>
-						</button>
-						<button target="_blank" href="https://github.com/creativetimofficial" rel="nofollow" className="btn btn-icon-only btn-github rounded-circle" data-toggle="tooltip" data-original-title="Star on Github">
-							<span className="btn-inner--icon"><i className="fa fa-github"></i></span>
-						</button>
-					</div>
-				</div>
-				<hr/>
-				<div className="row align-items-center justify-content-md-between">
-					<div className="col-md-6">
-						<div className="copyright text-white">
-							Proudly made with <i className="fa fa-heart text-danger"></i> by <a href="https://himatikauty.or.id/" target="_blank">Himatika UTY</a> Using <a href="https://www.creative-tim.com/product/argon-design-system" target="_blank">Argon</a> | Inspired From PetaniKode
+				<div className="row row-grid align-items-center mb-3">
+					<div className="col-lg-4">
+						<div className="col-md-3 mt-2">
+							<img src="https://i.ibb.co/Z6L1rmn/logo-1-big.png" alt="logo" width="100" />
+						</div>
+						<div className="col-md-12 mt-3">
+							<h3 className="text-white font-weight-bolder mb-2">HIMATIKA UTY</h3>
+							<h6 className="mb-0 font-weight-light text-white">Himpunan Mahasiswa Informatika Universitas Teknologi Yogyakarta</h6>
 						</div>
 					</div>
-					<div className="col-md-6">
-						<ul className="nav nav-footer justify-content-end">
-							<li className="nav-item">
-								<a href="" className="nav-link text-white" target="_blank">Creative Tim</a>
+					<div className="col-lg-2 btn-wrapper d-flex flex-column">
+						<ul>
+							<h5 className="text-white font-weight-bolder mb-3">Pages</h5>
+							<li className="nav nav-footer justify-content-start">
+								<Link href={route('home')} className="text-white">
+									Home
+								</Link>
 							</li>
-							<li className="nav-item">
-								<a href="" className="nav-link text-white" target="_blank">About Us</a>
+							<li className="nav nav-footer justify-content-start mt-2">
+								<Link href={route('articles')} className="text-white">
+									Articles
+								</Link>
 							</li>
-							<li className="nav-item">
-								<a href="" className="nav-link text-white" target="_blank">Blog</a>
+							<li className="nav nav-footer justify-content-start mt-2">
+								<Link href='/' className="text-white">
+									Forums
+								</Link>
 							</li>
-							<li className="nav-item">
-								<a href="" className="nav-link text-white" target="_blank">License</a>
+							<li className="nav nav-footer justify-content-start mt-2">
+								<Link href='/' className="text-white">
+									Contributors
+								</Link>
 							</li>
 						</ul>
+					</div>
+
+					<div className="col-lg-3 btn-wrapper d-flex flex-column">
+						<ul>
+							<h5 className="text-white font-weight-bolder mb-3">Tutorial Favorit</h5>
+							<li className="nav nav-footer justify-content-start">
+								<Link href='#' className="text-white">
+									Tutorial HTML
+								</Link>
+							</li>
+							<li className="nav nav-footer justify-content-start mt-2">
+								<Link href='#' className="text-white">
+									Tutorial CSS
+								</Link>
+							</li>
+							<li className="nav nav-footer justify-content-start mt-2">
+								<Link href='#' className="text-white">
+									Tutorial Javascript
+								</Link>
+							</li>
+							<li className="nav nav-footer justify-content-start mt-2">
+								<Link href='#' className="text-white">
+									Tutorial NodeJs
+								</Link>
+							</li>
+						</ul>
+					</div>
+
+					<div className="col-lg-3 btn-wrapper d-flex flex-column">
+						<ul>
+							<h5 className="text-white font-weight-bolder mb-3">Social Media</h5>
+							<li className="nav nav-footer justify-content-start">
+								<a href='https://www.instagram.com/himatikauty' target='_blank' className="text-white">
+									Instagram
+								</a>
+							</li>
+							<li className="nav nav-footer justify-content-start mt-2">
+								<a href='https://www.youtube.com/c/HimatikaUty' target='_blank' className="text-white">
+									Youtube
+								</a>
+							</li>
+							<li className="nav nav-footer justify-content-start mt-2">
+								<a href='https://www.tiktok.com/@himatikauty' target='_blank' className="text-white">
+									Tiktok
+								</a>
+							</li>
+							<li className="nav nav-footer justify-content-start mt-2">
+								<a href='https://discord.com/invite/rf4AyDaHp7' target='_blank' className="text-white">
+									Discord
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div className="divider mt-4 mb-4"></div>
+				<div className="row align-items-center">
+					<div className="col-md-12">
+						<div className="copyright text-white text-center">
+							Proudly made with <i className="fa fa-heart text-danger"></i> by <a href="https://himatikauty.or.id/" target="_blank">Himatika UTY</a> Using <a href="https://www.creative-tim.com/product/argon-design-system" target="_blank">Argon</a> | Inspired From PetaniKode
+						</div>
 					</div>
 				</div>
 			</div>
@@ -51,4 +105,4 @@ const Footer = () => {
 	)
 }
 
-export default Footer
+export default Footer;

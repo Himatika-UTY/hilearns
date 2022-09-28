@@ -72,4 +72,12 @@ class HomeController extends Controller
 			'articles' => $articles,
 		]);
 	}
+
+	public function search()
+	{
+		return Inertia::render('Search', [
+			'title' => 'Search',
+			'articles' => Article::all(),
+		]);
+	}
 }

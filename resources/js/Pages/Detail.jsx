@@ -2,10 +2,7 @@ import ArticleList2 from "../Components/ArticleList2";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import '../Components/Styles/tutorial.css';
-
-const getImage = (image) => {
-	return `/upload/modul/${image}`;
-}
+import ModuleImage from "../Helpers/ModuleImage";
 
 const isModul = (articles) => {
 	return (
@@ -36,7 +33,7 @@ const Detail = ({ modul, articles, count }) => {
 									<div className="card-body p-lg-5">
 										<div className="row">
 											<div className="col-md-3">
-												<img src={getImage(modul.image)} className="tutorial-image-xl rounded" alt="Responsive image" />
+												<img src={ModuleImage(modul.image)} className="tutorial-image-xl rounded" alt="Responsive image" />
 											</div>
 											<div className="col-md-9">
 												<span className="text-default text-capitalize font-weight-900 detail-title">{ modul.name }</span>
@@ -63,6 +60,6 @@ const Detail = ({ modul, articles, count }) => {
 	)
 }
 
-export default Detail
+export default Detail;
 
 		

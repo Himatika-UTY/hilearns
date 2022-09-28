@@ -3,6 +3,7 @@ import { Link } from "@inertiajs/inertia-react";
 const Paginator = ({ data }) => {
 	const prev = data.links[0].url;
    const next = data.links[data.links.length - 1].url;
+	
    return (
 		data.data && data.data.length > 0 && (
 			<nav>

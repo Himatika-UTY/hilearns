@@ -1,6 +1,6 @@
 import { Link } from "@inertiajs/inertia-react";
 
-export default function NavbarHome() {
+const NavbarHome = () => {
 	return (
        	<>
             <nav
@@ -95,6 +95,15 @@ export default function NavbarHome() {
                         </ul>
                         <ul className="navbar-nav align-items-lg-center ml-lg-auto">
                             <li className="nav-item">
+                               <Link className="nav-link nav-link-icon" href={route('search')} data-toggle="tooltip" title="Search Article">
+                                    <i className="fas fa-search"></i>
+                                    <span className="nav-link-inner--text d-lg-none">
+                                    Search
+                                    </span>
+                                </Link>
+                            </li>
+
+                            <li className="nav-item">
                                 <a
                                     className="nav-link nav-link-icon"
                                     href="https://www.instagram.com/himatikauty"
@@ -157,3 +166,5 @@ export default function NavbarHome() {
         </>
     );
 }
+
+export default NavbarHome;

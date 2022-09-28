@@ -7,10 +7,7 @@ import Share from '../Components/Share';
 import Recent from '../Components/Recent';
 import DaftarIsi from '../Components/DaftarIsi';
 import { useEffect } from 'react';
-
-const getImageLink = (image) => {
-	return `/upload/articles/${image}`;
-}
+import ArticleImage from "../Helpers/ArticleImage";
 
 const formatDate = (date) => {
 	const options = { year: "numeric", month: "long", day: "numeric" };
@@ -41,7 +38,7 @@ export default function Read(props) {
 			<Navbar />
 			<main>
 				<section className="section">
-					<div className="container-fluid">
+					<div className="container-article">
 						<div className="row row-grid mt-6">
 							<div className="col-md-8">
 								<div className="card shadow border-0" style={{ borderRadius: '10px' }}>
@@ -64,7 +61,7 @@ export default function Read(props) {
 										</div>
 
 										<div className="content mt-3 mb-4 text-default" id='content'>
-											<img src={getImageLink(article.image)} alt="cover" className="read-cover mb-3" />
+											<img src={ArticleImage(article.image)} alt="cover" className="read-cover mb-3" />
 											<div dangerouslySetInnerHTML={{__html: article.content}}></div>
 										</div>
 									</div>

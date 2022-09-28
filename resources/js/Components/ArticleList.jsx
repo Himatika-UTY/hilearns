@@ -1,13 +1,7 @@
 import './Styles/home.css'
 import { Link } from '@inertiajs/inertia-react';
-
-const clearHtml = (html) => {
-	return html.replace(/(<([^>]+)>)/ig, '').substring(0, 100) + '...';
-}
-
-const getImageLink = (image) => {
-	return `/upload/articles/${image}`;
-}
+import ArticleImage from '../Helpers/ArticleImage';
+import ClearHtml from '../Helpers/ClearHtml';
 
 const NoArticle = () => {
    return (
@@ -32,11 +26,11 @@ const ShowArticle = (data) => {
                <div className="card-body py-1">
                   <Link href={route('read', article.slug)}>
                      <div className="card-cover">
-                        <img src={getImageLink(article.image)} alt="cover" className="cover" />
+                        <img src={ArticleImage(article.image)} alt="cover" className="cover" />
                      </div>
                      <div className="mt-2">
                         <h5 className="font-weight-bold text-capitalize">{article.title}</h5>
-                        <p className="article-description text-muted">{clearHtml(article.content)}</p>
+                        <p className="article-description text-muted">{ClearHtml(article.content)}</p>
                      </div>
 						</Link>
                </div>

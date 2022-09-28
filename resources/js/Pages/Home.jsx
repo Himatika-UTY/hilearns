@@ -7,7 +7,7 @@ import Features from "../Components/Features";
 import '../Components/Styles/tutorial.css';
 import { Link } from "@inertiajs/inertia-react";
 
-export default function Home(props) {
+const Home = (props) => {
 	return (
 		<>
 			<NavbarHome />
@@ -145,3 +145,5 @@ export default function Home(props) {
 		</>
 	);
 }
+
+export default Home;

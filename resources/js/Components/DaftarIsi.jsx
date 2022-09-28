@@ -1,9 +1,9 @@
 import { Link } from "@inertiajs/inertia-react";
 
-const active = (value) => {
+const active = (value, i) => {
 	return (
 		<>
-			<div className="col-lg-12 detail-card bg-default text-white border-rounded px-3 py-2 mt-2">
+			<div key={i} className="col-lg-12 detail-card bg-default text-white border-rounded px-3 py-2 mt-2">
 				<span className="align-middle">
 					<i className="fa-solid fa-book mr-2"></i>
 					{value.title}
@@ -41,7 +41,7 @@ const DaftarIsi = ({ data, currentId }) => {
 
 						<div className="divider mb-3"></div>
 						{data && data.map((value, i) =>
-							value.id == currentId ? active(value) : notActive(value)
+							value.id == currentId ? active(value, i) : notActive(value)
 						)}
 					</div>
 				</div>

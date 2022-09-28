@@ -1,8 +1,5 @@
-import { Link } from "@inertiajs/inertia-react"
-
-const getImage = (image) => {
-	return `/upload/modul/${image}`;
-}
+import { Link } from "@inertiajs/inertia-react";
+import ModuleImage from "../Helpers/ModuleImage";
 
 const RecommendList = ({ recommends }) => {
 	return (
@@ -13,7 +10,7 @@ const RecommendList = ({ recommends }) => {
 							<div className="card card-lift--hover shadow border-0 rounded align-content-center">
 								<div className="card-body py-3 px-3 tutorial-flex">
 									<div className="w-auto">
-										<img src={getImage(recommend.modul.image)} className="tutorial-image" alt="Responsive image" />
+										<img src={ModuleImage(recommend.modul.image)} className="tutorial-image" alt="Responsive image" />
 									</div>
 									<div className="tutorial-desc">
 										<span className="font-weight-bolder tutorial-title text-default">{recommend.modul.name}</span>
