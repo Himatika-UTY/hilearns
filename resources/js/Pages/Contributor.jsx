@@ -3,7 +3,7 @@ import Footer from '../Components/Footer'
 import { Link } from '@inertiajs/inertia-react'
 import '../Components/Styles/tutorial.css';
 import '../Components/Styles/contributor.css';
-import ContributorImg from '../Assets/Img/contributor3.png'
+import ContributorImg from '../Assets/Img/Contributor3.png'
 
 const Contributor = () => {
 	return (
