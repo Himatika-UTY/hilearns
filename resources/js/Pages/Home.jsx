@@ -5,6 +5,7 @@ import CategoryList from "../Components/CategoryList";
 import Paginator from "../Components/Paginator";
 import Features from "../Components/Features";
 import '../Components/Styles/tutorial.css';
+import BannerImg from '../Assets/Img/Banner2.svg'
 import { Link } from "@inertiajs/inertia-react";
 
 const Home = (props) => {
@@ -28,15 +29,18 @@ const Home = (props) => {
 						<div className="container-fluid">
 							<div className="col px-0">
 								<div className="row">
-									<div className="col-lg-10 position-relative banner">
+									<div className="col-md-7 position-relative banner">
 										<h1 className="display-1 text-white font-weight-900">HiLearns</h1>
-										<p className="lead text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia ut dolores laudantium dolorem soluta eveniet sequi rerum! Quo quas maiores vitae fuga dolorem placeat quia saepe optio, nostrum numquam quaerat?</p>
+										<p className="lead text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia ut dolores laudantium dolorem soluta eveniet sequi rerum?</p>
 										<div className="btn-wrapper">
 											<Link href={route('tutorial')} className="btn btn-white btn-icon mb-3 mb-sm-0">
 												<span className="btn-inner--icon"><i className="fa fa-graduation-cap text-default" ></i></span>
 												<span className="btn-inner--text text-default">Belajar Sekarang</span>
 											</Link>
 										</div>
+									</div>
+									<div className="col-md-5 position-relative">
+										<img src={BannerImg} alt="banner" className="banner-img"/>
 									</div>
 								</div>
 							</div>

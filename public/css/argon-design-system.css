@@ -634,14 +634,14 @@ pre code {
 }
 
 .container-fluid {
-  width: 80%;
+  width: 1220px;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
   .container-fluid {
     width: 90%;
   }
@@ -5244,8 +5244,8 @@ input[type="button"].btn-block {
 
 .navbar-expand>.container,
 .navbar-expand>.container-fluid {
-  padding-right: 0;
-  padding-left: 0;
+  padding-right: 30px;
+  padding-left: 30px;
 }
 
 .navbar-expand .navbar-nav {
@@ -7612,7 +7612,7 @@ button.bg-dark:focus {
 }
 
 .bg-default {
-  background-color: #172b4d !important;
+  background-color: #25335C !important;
 }
 
 a.bg-default:hover,
@@ -20898,7 +20898,7 @@ textarea[resize="horizontal"] {
 }
 
 .section-shaped .shape-style-1.shape-dark {
-  background: linear-gradient(150deg, #172b4d 15%, #172b4d 70%, #32325d 94%);
+  background: linear-gradient(150deg, #172b4d 15%, #172b4d 70%, #25335C 94%);
 }
 
 .section-shaped .shape-style-2 span {

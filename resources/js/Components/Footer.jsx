@@ -7,7 +7,7 @@ const Footer = ({ articles }) => {
 				<div className="row row-grid align-items-center mb-3">
 					<div className="col-lg-4">
 						<div className="col-md-3 mt-2">
-							<img src="https://i.ibb.co/Z6L1rmn/logo-1-big.png" alt="logo" width="100" />
+							<img src="https://i.ibb.co/Z6L1rmn/logo-1-big.png" alt="logo" width="60" />
 						</div>
 						<div className="col-md-12 mt-3">
 							<h3 className="text-white font-weight-bolder mb-2">HIMATIKA UTY</h3>
@@ -28,12 +28,12 @@ const Footer = ({ articles }) => {
 								</Link>
 							</li>
 							<li className="nav nav-footer justify-content-start mt-2">
-								<Link href='/' className="text-white">
-									Forums
+								<Link href={route('tutorial')} className="text-white">
+									Tutorial
 								</Link>
 							</li>
 							<li className="nav nav-footer justify-content-start mt-2">
-								<Link href='/' className="text-white">
+								<Link href={route('contributor')} className="text-white">
 									Contributors
 								</Link>
 							</li>

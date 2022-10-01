@@ -1,0 +1,31 @@
+.contribution {
+	width: 40%;
+	margin-left: 30px;
+}
+
+.contribution-flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+@media screen and (max-width: 1448px) {
+	.contribution {
+		margin-left: 50px;
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.contribution {
+		width: 100%;
+		margin-left: 0px;
+		margin-top: 20px;
+		text-align: center;
+	}
+
+	.contribution-flex {
+		flex-direction: column;
+	}
+}

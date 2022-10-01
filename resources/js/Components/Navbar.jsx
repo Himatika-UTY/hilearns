@@ -45,7 +45,7 @@ const Navbar = () => {
 							</Link>
 						</li>
 						<li className="nav-item dropdown">
-                     <Link className="nav-link" href="#" role="button">
+                     <Link className="nav-link" href={route('contributor')} role="button">
                         <i className="fa fa-users" aria-hidden="true"></i>
                         <span className="nav-link-inner--text">
                            Contributors

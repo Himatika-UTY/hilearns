@@ -45,7 +45,7 @@ const AllArticle = ({ articles, moduls }) => {
 												<ul className="list-group list-group-flush">
 													{/* All categories */}
 													<li className="list-group-item">
-														<Link href={route('articles')} className="text-default">
+														<Link onClick={() => setCategory('')} className="text-default">
 															All Categories <span className="badge badge-default badge-pill ml-1">{countAllArticle(articles)}</span>
 														</Link>
 													</li>

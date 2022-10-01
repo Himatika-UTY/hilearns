@@ -20,7 +20,7 @@ use App\Http\Controllers\AuthController;
 |
 */
 
-Route::prefix('admin')->middleware('authenticate')->group(function () {
+Route::prefix('dash')->middleware('authenticate')->group(function () {
 	Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
 	// category
@@ -66,6 +66,7 @@ Route::get('/tutorial', [HomeController::class, 'tutorial'])->name('tutorial');
 Route::get('/tutorial/{slug}', [HomeController::class, 'tutorial_detail'])->name('detail');
 Route::get('/tags/{topic}', [HomeController::class, 'topic'])->name('topic');
 Route::get('/search' , [HomeController::class, 'search'])->name('search');
+Route::get('/contributor', [HomeController::class, 'contributor'])->name('contributor');
 
 // Line ini harus tetap berada di paling bawah agar route tidak tabrakan
 Route::get('/{slug}', [HomeController::class, 'read'])->name('read');

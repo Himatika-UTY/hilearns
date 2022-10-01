@@ -80,4 +80,11 @@ class HomeController extends Controller
 			'articles' => Article::all(),
 		]);
 	}
+
+	public function contributor()
+	{
+		return Inertia::render('Contributor', [
+			'title' => 'Contributor',
+		]);
+	}
 }
