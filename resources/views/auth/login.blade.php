@@ -48,6 +48,12 @@
 								{{ $message }}
 							</div>
 						</div>
+					@elseif ($message = Session::get('error'))
+						<div class="col-md-5">
+							<div class="alert alert-danger text-white" style="border: none;" role="alert">
+								{{ $message }}
+							</div>
+						</div>
 					@endif
 				</div>
 				<div class="row justify-content-center">

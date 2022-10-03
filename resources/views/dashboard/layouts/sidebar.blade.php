@@ -48,13 +48,21 @@
 					<span class="nav-link-text ms-1">Recommendation</span>
 				</a>
 			</li>
+			<li class="nav-item">
+				<a class="nav-link {{ $title == 'Contributors' ? 'active' : '' }}" href="{{ route('contributors') }}">
+					<div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+						<i class="fa fa-users text-dark text-sm opacity-10"></i>
+					</div>
+					<span class="nav-link-text ms-1">Contributor</span>
+				</a>
+			</li>
 			<li class="nav-item mt-3">
 				<h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">System Settings</h6>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link " href="../pages/profile.html">
 					<div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-						<i class="ni ni-settings-gear-65 text-dark text-sm opacity-10"></i>
+						<i class="ni ni-settings-gear-65 text-primary text-sm opacity-10"></i>
 					</div>
 					<span class="nav-link-text ms-1">Settings</span>
 				</a>

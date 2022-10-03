@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\Landing;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Modul;
 use App\Models\Article;
 use App\Models\Recommend;
+use App\Models\Contributor;
 use Inertia\Inertia;
 
 class HomeController extends Controller
@@ -83,8 +83,10 @@ class HomeController extends Controller
 
 	public function contributor()
 	{
+		$contributors = Contributor::all();
 		return Inertia::render('Contributor', [
 			'title' => 'Contributor',
+			'contributors' => $contributors
 		]);
 	}
 }

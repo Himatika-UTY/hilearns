@@ -7,6 +7,7 @@ use App\Http\Controllers\Dashboard\CategoryController;
 use App\Http\Controllers\Dashboard\ModulController;
 use App\Http\Controllers\Dashboard\ArticleController;
 use App\Http\Controllers\Dashboard\RecommendController;
+use App\Http\Controllers\Dashboard\ContributorController;
 use App\Http\Controllers\AuthController;
 
 /*
@@ -52,6 +53,12 @@ Route::prefix('dash')->middleware('authenticate')->group(function () {
 	Route::get('/recommend/create', [RecommendController::class, 'create'])->name('recommend.create');
 	Route::post('/recommend/create/save', [RecommendController::class, 'save'])->name('recommend.create.save');
 	Route::delete('/recommend/delete/{id}', [RecommendController::class, 'destroy'])->name('recommend.delete');
+
+	// Contributor
+	Route::get('/contributor', [ContributorController::class, 'index'])->name('contributors');
+	Route::get('/contributor/create', [ContributorController::class, 'create'])->name('contributors.create');
+	Route::post('/contributor/create/save', [ContributorController::class, 'create_save'])->name('contributors.create.save');
+	Route::delete('/contributor/delete/{id}', [ContributorController::class, 'destroy'])->name('contributors.delete');
 });
 
 // Auth
