@@ -20,7 +20,8 @@
 }
 
 .container-article {
-	width: 1220px;
+	width: 80%;
+ 	max-width: 1220px;
 	padding-right: 15px;
 	padding-left: 15px;
 	margin-right: auto;

@@ -6,6 +6,12 @@ import '../Components/Styles/contributor.css';
 import ContributorImg from '../Assets/Img/Contributor3.png'
 import ContributorCard from '../Components/ContributorCard';
 
+const trim_words = (words, length) => {
+   let string = words.split(/\s+/,length);
+   let newString = string.join(" ");
+   return newString;
+}
+
 const Contributor = ({ contributors }) => {
 	return (
 		<>
@@ -19,12 +25,12 @@ const Contributor = ({ contributors }) => {
 								<h6 className='text-muted text-center'>Lihat siapa saja yang berkontribusi di dalam pengembangan HiLearns 👋</h6>
 							</div>
 						</div>
-						<div className="row mt-4">
+						<div className="row mt-2">
 							<div className="col-lg-12">
 								<div className="row justify-content-center">
-									{contributors.map((contributor, i) => 
-										<div key={i} className="col-md-4">
-											<ContributorCard name={contributor.name} position={contributor.position} image={contributor.image} link={contributor.redirect_url} />
+									{contributors && contributors.map((contributor, i) => 
+										<div key={i} className="col-md-4 mt-3">
+											<ContributorCard name={trim_words(contributor.name, 2)} position={contributor.position} image={contributor.image} link={contributor.redirect_url} />
 										</div>
 									)}
 								</div>

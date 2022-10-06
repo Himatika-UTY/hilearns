@@ -35,12 +35,14 @@ class AuthController extends Controller
         ])->json();
 
         if($response['success'] == true) {
-            if($response['data']['role'] == 'Admin') {
+            if($response['data']['role'] == 'Admin' || $response['data']['role'] == 'Member') {
                 $payload = [
                     'id_user' => $response['data']['id_pengurus'],
                     'username' => $credentials['username'],
                     'fullname' => $response['data']['nama'],
                     'role' => $response['data']['role'],
+                    'angkatan' => $response['data']['angkatan'],
+                    'divisi' => $response['data']['divisi'],
                 ];
 
                 $jwt = JWT::encode($payload, env('JWT_KEY'), 'HS256');

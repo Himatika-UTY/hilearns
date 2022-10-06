@@ -20,10 +20,10 @@
 				<div class="card-header pb-0">
 					<div class="row">
 						<div class="col-lg-6">
-							<h6>All Articles</h6>
+							<h6>Your Articles</h6>
 						</div>
 						<div class="col-lg-6 justify-content-end d-flex">
-							<a href="{{ route('article.create') }}" class="btn btn-primary btn-sm"><i class="fa-solid fa-plus"></i>&nbsp;&nbsp;Tambah</a>
+							<a href="{{ route('myarticle.create') }}" class="btn btn-primary btn-sm"><i class="fa-solid fa-plus"></i>&nbsp;&nbsp;Tambah</a>
 						</div>
 					</div>
 				</div>
@@ -34,7 +34,6 @@
 									<tr>
 										<th>NO</th>
 										<th>Title</th>
-										<th>Author</th>
 										<th>Topic</th>
 										<th>Modul</th>
 										<th>Cover</th>
@@ -47,7 +46,6 @@
 									<tr>
 										<td>{{ $loop->iteration }}</td>
 										<td>{{ $article->title }}</td>
-										<td>{{ $article->author }}</td>
 										<td>
 											@php
 											$topics = explode(',', strip_tags($article->topic));
@@ -63,10 +61,10 @@
 											<a href="{{ route('read', $article->slug) }}" target="_blank" class="badge btn-delete bg-success border-0 btn-delete text-white">
 												<i class="fa fa-eye" aria-hidden="true"></i>
 											</a>
-											<a href="{{ route('article.edit', $article->id) }}" class="badge ms-1 bg-warning border-0 btn-delete text-white">
+											<a href="{{ route('myarticle.edit', $article->id) }}" class="badge ms-1 bg-warning border-0 btn-delete text-white">
 												<i class="fa fa-pencil" aria-hidden="true"></i>
 											</a>
-											<form method="POST" action="{{ route('article.delete', $article->id) }}">
+											<form method="POST" action="{{ route('myarticle.delete', $article->id) }}">
 											@csrf
 											@method('DELETE')
 												<button type="submit" class="badge bg-danger border-0 btn-delete ms-1">

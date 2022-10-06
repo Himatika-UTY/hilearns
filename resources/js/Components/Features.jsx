@@ -2,7 +2,7 @@ import './Styles/home.css'
 
 const Features = () => {
 	return (
-		<section className="section">
+		<section className="section section-lg">
 			<div className="container-fluid">
 				<div className="row justify-content-center">
 					<div className="col-lg-12 mb-1 mt-4">

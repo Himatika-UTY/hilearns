@@ -55,7 +55,7 @@ const Home = (props) => {
 
 				<Features />
 
-				<section className="section">
+				<section className="section section-lg">
 					<div className="container-fluid">
 						<div className="row justify-content-center">
 							<div className="col-lg-12">
@@ -78,8 +78,8 @@ const Home = (props) => {
 					</div>
 				</section>
 
-				<section className="section pb-0 bg-default2">
-					<div className="section features-2">
+				<section className="section section-lg pb-0 bg-default2">
+					<div className="features-2">
 						<div className="container-fluid">
 							<div className="row align-items-center">
 								<div className="col-lg-5 col-md-8 mr-auto text-left">
@@ -131,7 +131,7 @@ const Home = (props) => {
 					</div>
 				</section>
 
-				<section className="section mt-5">
+				<section className="section section-lg mt-5">
 					<div className="container-fluid">
 						<div className="row justify-content-center">
 							<div className="col-lg-12 bg-gradient-warning shadow p-5" style={{ borderRadius: '10px' }}>

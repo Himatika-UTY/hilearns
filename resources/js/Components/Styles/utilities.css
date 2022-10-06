@@ -1,3 +1,7 @@
+body {
+	overflow-x: hidden;
+}
+
 .banner {
 	top: 50px;
 }
@@ -45,6 +49,7 @@
 	margin: 0 auto;
 	padding: 0 20px;
 }
+
 
 .border-rounded {
 	border-radius: 8px;

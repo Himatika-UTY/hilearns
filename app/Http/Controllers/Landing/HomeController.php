@@ -8,6 +8,7 @@ use App\Models\Modul;
 use App\Models\Article;
 use App\Models\Recommend;
 use App\Models\Contributor;
+use App\Models\Viewers;
 use Inertia\Inertia;
 
 class HomeController extends Controller
@@ -55,11 +56,18 @@ class HomeController extends Controller
 	{
 		$article = Article::where('slug', $slug)->with('modul')->first();
 		if(!$article) abort(404);
+
+		Viewers::create([
+			'id_article' => $article->id,
+			'ip' => request()->ip(),
+		]);
+
 	 	return Inertia::render('Read', [
 			'title' => $article->title,
 			'article' => $article,
 			'articles' => Article::where('id_modul', $article->id_modul)->orderBy('created_at', 'asc')->get(),
 			'recent' => Article::orderBy('created_at', 'desc')->limit(4)->get(),
+			'viewers' => Viewers::where('id_article', $article->id)->count(),
 		]);
 	}
 

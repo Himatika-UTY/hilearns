@@ -11,22 +11,23 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\AuthController;
 
-class ArticleController extends Controller
+class MyArticleController extends Controller
 {
     public function index()
     {
-        return view('dashboard.article.index', [
-            'title' => 'Article',
-            'articles' => Article::with('modul')->get(),
-        ]);
-    }
+		$jwt = AuthController::getJWT();
+        return view('dashboard.myarticle.index', [
+			'title' => 'My Articles',
+			'articles' => Article::with('modul')->where('author', $jwt->fullname)->get(),
+		]);
+	}
 
     public function create()
     {
-        return view('dashboard.article.create', [
-            'title' => 'Article',
-            'moduls' => Modul::all(),
-        ]);
+		return view('dashboard.myarticle.create', [
+			'title' => 'My Articles',
+			'moduls' => Modul::all(),
+		]);
     }
 
     public function create_save(Request $request)
@@ -56,21 +57,28 @@ class ArticleController extends Controller
             'content' => $request->content,
         ]);
 
-        return redirect()->route('article')->with('success', 'Article berhasil ditambahkan');
+        return redirect()->route('myarticle')->with('success', 'Article berhasil ditambahkan');
     }
 
     public function edit($id)
     {
-        return view('dashboard.article.edit', [
-            'title' => 'Article',
-            'moduls' => Modul::all(),
-            'article' => Article::find($id),
-        ]);
+		$jwt = AuthController::getJWT();
+		$article = Article::where('id', $id)->where('author', $jwt->fullname)->first();
+		if(!$article) abort(404);
+
+		return view('dashboard.myarticle.edit', [
+			'title' => 'My Articles',
+			'article' => $article,
+			'moduls' => Modul::all(),
+		]);
     }
 
     public function edit_save(Request $request, $id)
     {
-        $oldData = Article::find($id);
+       	$jwt = AuthController::getJWT();
+		$oldData = Article::where('id', $id)->where('author', $jwt->fullname)->first();
+		if(!$oldData) abort(404);
+
         $rules_title = $request->title == $oldData->title ? 'required|string|max:255' : 'required|string|max:255|unique:articles,title';
         $rules_image = $request->image ? 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048' : '';
 
@@ -90,10 +98,7 @@ class ArticleController extends Controller
         } else {
             $imageName = $oldData->image;
         }
-
-        // get jwt
-        $jwt = AuthController::getJWT();
-
+        
         Article::find($id)->update([
             'id_modul' => $request->modul,
             'title' => $request->title,
@@ -104,14 +109,16 @@ class ArticleController extends Controller
             'content' => $request->content,
         ]);
 
-        return redirect()->route('article')->with('success', 'Article berhasil diubah');
+        return redirect()->route('myarticle')->with('success', 'Article berhasil diubah');
     }
 
     public function destroy($id)
     {
-        $article = Article::find($id);
-        File::delete(public_path('upload/articles/' . $article->image));
+		$jwt = AuthController::getJWT();
+		$article = Article::where('id', $id)->where('author', $jwt->fullname)->first();
+		if(!$article) abort(404);
+		File::delete(public_path('upload/articles/' . $article->image));
         $article->delete();
-        return redirect()->route('article')->with('success', 'Article berhasil dihapus');
+        return redirect()->route('myarticle')->with('success', 'Article berhasil dihapus');
     }
 }

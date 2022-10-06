@@ -13,12 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('contributors', function (Blueprint $table) {
+        Schema::create('viewers', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('position');
-            $table->string('image');
-            $table->string('redirect_url');
+            $table->foreignUuid('id_article')->constrained('articles')->onDelete('cascade');
+            $table->string('ip');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contributors');
+        Schema::dropIfExists('viewers');
     }
 };

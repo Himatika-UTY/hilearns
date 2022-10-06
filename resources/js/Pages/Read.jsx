@@ -18,6 +18,7 @@ export default function Read(props) {
 	const article = props.article;
 	const articles = props.articles;
 	const recent = props.recent;
+	const viewers = props.viewers;
 
 	useEffect(() => {
 		var disqus_config = function () {
@@ -44,8 +45,9 @@ export default function Read(props) {
 								<div className="card shadow border-0" style={{ borderRadius: '10px' }}>
 									<div className="card-body px-5 py-4 mt-3">
 										<div className="profile">
-											<p className="description font-weight-500 mt-1 ml-2 mr-3"><i className="fa fa-user mr-2" aria-hidden="true"></i>{ article.author }</p>
-											<p className="description font-weight-500 mt-1 ml-2"><i className="fa fa-calendar mr-2" aria-hidden="true"></i>{ formatDate(article.created_at) }</p>
+											<p className="description font-weight-500 mt-1 mr-4"><i className="fa fa-user mr-2" aria-hidden="true"></i>{ article.author }</p>
+											<p className="description font-weight-500 mt-1 mr-4"><i className="fa fa-calendar mr-2" aria-hidden="true"></i>{ formatDate(article.created_at) }</p>
+											<p className="description font-weight-500 mt-1"><i className="fa-solid fa-eye  mr-2"></i>{ viewers ? viewers : '0' }</p>
 										</div>
 										<h1 className="text-default read-title">{ article.title }</h1>
 										<div className="divider"></div>
