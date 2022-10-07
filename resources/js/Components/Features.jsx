@@ -5,7 +5,7 @@ const Features = () => {
 		<section className="section section-lg">
 			<div className="container-fluid">
 				<div className="row justify-content-center">
-					<div className="col-lg-12 mb-1 mt-4">
+					<div className="col-lg-12 mb-1 mt-5">
 						<span className="font-weight-900 text-default2">
 							FITUR
 						</span>

@@ -26,7 +26,7 @@ const Home = (props) => {
 							<span></span>
 							<span></span>
 						</div>
-						<div className="container-fluid">
+						<div className="container-fluid mt-5">
 							<div className="col px-0">
 								<div className="row">
 									<div className="col-md-7 position-relative banner">
