@@ -8,7 +8,7 @@ const ModulList = ({ moduls }) => {
 				<div key={i} className="col-lg-12 mt-lg-4">
 					<Link href={ route('detail', modul.slug) }>
 						<div className="card card-lift--hover shadow border-0 rounded align-content-center">
-							<div className="card-body py-3 px-3 tutorial-flex">
+							<div className="card-body py-3 px-3 tutorial-flex2">
 								<div className="w-auto">
 									<img src={ModuleImage(modul.image)} className="tutorial-image-lg" alt="Responsive image" />
 								</div>

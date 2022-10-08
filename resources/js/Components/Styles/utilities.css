@@ -65,7 +65,7 @@ body {
 	cursor: pointer;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 991px) {
 	.banner {
 		top: 60px;
 		margin-bottom: 20vh;
