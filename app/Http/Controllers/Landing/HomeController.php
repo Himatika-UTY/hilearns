@@ -27,7 +27,7 @@ class HomeController extends Controller
 		return Inertia::render('AllArticle', [
 			'title' => 'All Article',
 			'moduls' => Modul::all(),
-			'articles' => Article::orderBy('created_at', 'desc')->get(),
+			'articles' => Article::orderBy('created_at', 'desc')->paginate(9),
 		]);
 	}
 

@@ -37,72 +37,19 @@ const AllArticle = ({ articles, moduls }) => {
 				<section className="section mt-6">
 					<div className="container-fluid">
 						<div className="row">
-								<div className="col-md-4 mt-4">
-									<div className="card shadow border-0 card-style">
-										<div className="card-body py-1">
-											<div className="mt-2">
-												<h5 className="font-weight-bolder text-capitalize text-center p-2 text-default">Browse Categories</h5>
-												<ul className="list-group list-group-flush">
-													{/* All categories */}
-													<li className="list-group-item">
-														<Link onClick={() => setCategory('')} className="text-default">
-															All Categories <span className="badge badge-default badge-pill ml-1">{countAllArticle(articles)}</span>
-														</Link>
-													</li>
-
-													{moduls && moduls.map((modul, i) =>
-														<li key={i} className={`list-group-item text-white ${category == modul.id ? 'articles-active' : ''}`} style={{ cursor: 'pointer' }}>
-															<div onClick={() => setCategory(modul.id)} className="text-default">
-																{modul.name} <span className="badge badge-default badge-pill ml-1">{countArticleByModul(articles, modul.id)}</span>
-															</div>
-														</li>
-													)}
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div className="col-md-8">
-									<div className="row">
-										{/* check if useState is not null & sort by modul */}
-										{!search && category && articles && articles.filter(article => article.id_modul === category).map((article, i) =>
-											<div key={i} className="col-md-6 mt-4">
-												<div className="card shadow border-0 card-style">
-													<div className="card-body py-1">
-														<Link href={route('read', article.slug)}>
-															<div className="card-cover">
-																<img src={ArticleImage(article.image)} alt="cover" className="cover" />
-															</div>
-															<div className="mt-2">
-																<h5 className="font-weight-bold text-capitalize">{article.title}</h5>
-																<p className="article-description text-muted">{ClearHtml(article.content)}</p>
-															</div>
-														</Link>
-													</div>
-												</div>
-											</div>
-										)}
-
-										{/* check if useState is null & show all */}
-										{!category && articles && articles.map((article, i) =>
-											<div key={i} className="col-md-6 mt-4">
-												<div className="card shadow border-0 card-style">
-													<div className="card-body py-1">
-														<Link href={route('read', article.slug)}>
-															<div className="card-cover">
-																<img src={ArticleImage(article.image)} alt="cover" className="cover" />
-															</div>
-															<div className="mt-2">
-																<h5 className="font-weight-bold text-capitalize">{article.title}</h5>
-																<p className="article-description text-muted">{ClearHtml(article.content)}</p>
-															</div>
-														</Link>
-													</div>
-												</div>
-											</div>
-										)}
-									</div>
-								</div>
+							<div className="col-lg-12">
+								<span className="font-weight-900 text-default2">ARTICLES</span><br/>
+								<span className="font-weight-900 display-4 text-default">Lihat semua article kami</span><br/>
+								<span>Baca semua tutorial yang ada di HiLearns!</span><br/>
+							</div>
+							<div className="col-md-12">
+								<ArticleList data={articles.data} />
+							</div>
+						</div>
+						<div className="row mt-4">
+							<div className="col-lg-12">
+								<Paginator data={articles} />
+							</div>
 						</div>
 					</div>
 				</section>
