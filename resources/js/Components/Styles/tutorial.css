@@ -207,4 +207,10 @@
 	.banner-img {
 		display: none;
 	}
+
+	.tutorial-desc-sm {
+		color: #172b4d;
+		font-size: 0.8rem;
+		font-weight: 100;
+	}
 }
