@@ -30,7 +30,7 @@ const Home = (props) => {
 							<div className="col px-0">
 								<div className="row">
 									<div className="col-md-7 position-relative banner">
-										<h1 className="display-1 text-white font-weight-900">HiLearns</h1>
+										<h1 className="display-1 text-white font-weight-900">HiLearn</h1>
 										<p className="lead text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia ut dolores laudantium dolorem soluta eveniet sequi rerum?</p>
 										<div className="btn-wrapper">
 											<Link href={route('tutorial')} className="btn btn-white btn-icon mb-3 mb-sm-0">
