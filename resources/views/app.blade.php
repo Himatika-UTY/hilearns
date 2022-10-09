@@ -6,6 +6,7 @@
 		<title inertia>{{ config('app.name', 'Laravel') }}</title>
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
 		<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet" />
+		<base href="/">
 		<link href="{{ asset('css/nucleo-icons.css') }}" rel="stylesheet" />
 		<link href="{{ asset('css/nucleo-svg.css') }}" rel="stylesheet" />
 		<link href="{{ asset('css/font-awesome.css') }}" rel="stylesheet" />
