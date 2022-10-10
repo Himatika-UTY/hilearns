@@ -22,7 +22,7 @@ const Contributor = ({ contributors }) => {
 						<div className="row">
 							<div className="col-md-12">
 								<h1 className='text-default text-center font-weight-bolder'>Contributors</h1>
-								<h6 className='text-muted text-center'>Lihat siapa saja yang berkontribusi di dalam pengembangan HiLearns 👋</h6>
+								<h6 className='text-muted text-center'>Lihat siapa saja yang berkontribusi di dalam pengembangan HiLearn 👋</h6>
 							</div>
 						</div>
 						<div className="row mt-2">
@@ -46,7 +46,7 @@ const Contributor = ({ contributors }) => {
 										<h2 className="text-white font-weight-bold">
 											Ingin Namamu Ada Disini?
 										</h2>
-										<p className="text-white font-weight-300">Ayo segera kontak kami dan segera berkontribusi di Hilearns</p>
+										<p className="text-white font-weight-300">Ayo segera kontak kami dan segera berkontribusi di Hilearn</p>
 									</div>
 								</div>
 							</div>

@@ -40,7 +40,7 @@ const AllArticle = ({ articles, moduls }) => {
 							<div className="col-lg-12">
 								<span className="font-weight-900 text-default2">ARTICLES</span><br/>
 								<span className="font-weight-900 display-4 text-default">Lihat semua article kami</span><br/>
-								<span>Baca semua tutorial yang ada di HiLearns!</span><br/>
+								<span>Baca semua tutorial yang ada di HiLearn</span><br/>
 							</div>
 							<div className="col-md-12">
 								<ArticleList data={articles.data} />

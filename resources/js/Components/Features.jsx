@@ -14,7 +14,7 @@ const Features = () => {
 							Lihat fitur unggulan kami
 						</span>
 						<br />
-						<span>Fitur unggulan yang kami miliki di HiLearns</span>
+						<span>Fitur unggulan yang kami miliki di Hilearn</span>
 						<br />
 					</div>
 					
@@ -30,9 +30,7 @@ const Features = () => {
 											Tidak Dipungut Biaya
 										</h6>
 										<p className="feature-description">
-											Lorem, ipsum dolor sit amet
-											consectetur adipisicing elit. Quasi
-											veritatis, molestiae tempora
+											Nikmati akses artikel belajar programming di Hilearn secara gratis
 										</p>
 									</div>
 								</div>
@@ -47,9 +45,7 @@ const Features = () => {
 											Akses Dimana Saja
 										</h6>
 										<p className="feature-description">
-											Lorem ipsum dolor sit, amet
-											consectetur adipisicing elit.
-											Distinctio doloribus placeat libero?
+											Akses artikel belajar programming di Hilearn dimana saja dan kapan saja
 										</p>
 									</div>
 								</div>
@@ -64,9 +60,7 @@ const Features = () => {
 											Forum Belajar Bersama
 										</h6>
 										<p className="feature-description">
-											Lorem ipsum dolor sit, amet
-											consectetur adipisicing elit.
-											Distinctio doloribus placeat libero?
+											Berbagi ilmu dan pengalaman dengan teman-teman di forum belajar bersama
 										</p>
 									</div>
 								</div>

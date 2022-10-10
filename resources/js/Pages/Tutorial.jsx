@@ -17,7 +17,7 @@ const Tutorial = ({ moduls, recommends }) => {
 							<div className="col-lg-12 mt-4">
 								<span className="font-weight-900 text-default2">REKOMENDASI</span><br/>
 								<span className="font-weight-900 display-4 text-default">Lihat tutorial unggulan kami</span><br/>
-								<span>Tutorial unggulan yang kami miliki di HiLearns</span><br/>
+								<span>Tutorial unggulan yang kami miliki di HiLearn</span><br/>
 							</div>
 							<div className="col-lg-12">
 								<div className="row row-grid">
@@ -34,7 +34,7 @@ const Tutorial = ({ moduls, recommends }) => {
 							<div className="col-lg-12 mb-lg-0 mb-4">
 								<span className="font-weight-900 text-default2">TUTORIAL</span><br/>
 								<span className="font-weight-900 display-4 text-default">Lihat semua tutorial kami</span><br/>
-								<span>Explore semua tutorial yang kami miliki di HiLearns</span><br/>
+								<span>Explore semua tutorial yang kami miliki di HiLearn</span><br/>
 							</div>
 							<div className="col-lg-12">
 								<div className="row row-grid">

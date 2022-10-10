@@ -31,7 +31,9 @@ const Home = (props) => {
 								<div className="row">
 									<div className="col-md-7 position-relative banner">
 										<h1 className="display-1 text-white font-weight-900">HiLearn</h1>
-										<p className="lead text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia ut dolores laudantium dolorem soluta eveniet sequi rerum?</p>
+										<p className="lead text-white">
+											HiLearn adalah platform pembelajaran online yang menyediakan berbagai macam tutorial untuk memudahkan kamu belajar pemrograman.
+										</p>
 										<div className="btn-wrapper">
 											<Link href={route('tutorial')} className="btn btn-white btn-icon mb-3 mb-sm-0">
 												<span className="btn-inner--icon"><i className="fa fa-graduation-cap text-default" ></i></span>
@@ -87,7 +89,7 @@ const Home = (props) => {
 										<div className="w-100">
 											<span className="text-primary font-weight-900 text-white">KATEGORI</span><br/>
 											<span className="font-weight-900 display-4 text-white">Belajar materi sesuai minatmu</span><br/>
-											<p className="text-white">Lihat kategori materi yang kami miliki di HiLearns</p>
+											<p className="text-white">Lihat kategori materi yang kami miliki di HiLearn</p>
 										</div>
 										<ul className="list-unstyled">
 											<li className="py-2">
@@ -96,7 +98,9 @@ const Home = (props) => {
 														<div className="badge badge-circle badge-white mr-3"><i className="fa fa-check text-dark" aria-hidden="true"></i></div>
 													</div>
 													<div>
-														<h6 className="mb-0 text-white">Lorem ipsum dolor sit amet.</h6>
+														<h6 className="mb-0 text-white">
+															Belajar sesuai minat
+														</h6>
 													</div>
 												</div>
 											</li>
@@ -106,7 +110,9 @@ const Home = (props) => {
 														<div className="badge badge-circle badge-white mr-3"><i className="fa fa-check text-dark" aria-hidden="true"></i></div>
 													</div>
 													<div>
-														<h6 className="mb-0 text-white">Lorem ipsum dolor sit amet consectetur.</h6>
+														<h6 className="mb-0 text-white">
+															Materi up to date dan fresh
+														</h6>
 													</div>
 												</div>
 											</li>
@@ -116,7 +122,9 @@ const Home = (props) => {
 														<div className="badge badge-circle badge-white mr-3"><i className="fa fa-check text-dark" aria-hidden="true"></i></div>
 													</div>
 													<div>
-														<h6 className="mb-0 text-white">Lorem ipsum dolor sit.</h6>
+														<h6 className="mb-0 text-white">
+															Materi mudah dipahami
+														</h6>
 													</div>
 												</div>
 											</li>
