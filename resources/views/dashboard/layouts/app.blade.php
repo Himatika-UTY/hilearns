@@ -26,7 +26,7 @@
   	<script src="https://unpkg.com/@yaireo/tagify@3.1.0/dist/tagify.polyfills.min.js"></script>
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
-	<link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github-dark.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github-dark.min.css" rel="stylesheet" />
 	<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 	<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 	<link href="https://unpkg.com/quill-image-uploader@1.2.1/dist/quill.imageUploader.min.css" rel="stylesheet"/>

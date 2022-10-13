@@ -90,6 +90,15 @@
 	</div>
 </div>
 <script>
+	var quill = new Quill('#editor', {
+	modules: {
+		syntax: true,              // Include syntax module
+		toolbar: [['code-block']]  // Include button in toolbar
+	},
+	theme: 'snow'
+	});
+</script>
+<script>
 	var input = document.getElementById("tags");
 	new Tagify(input)
 </script>
