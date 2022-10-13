@@ -68,6 +68,7 @@
 									<div class="form-group">
 										<label class="form-control-label">Cover Image</label>
 										<input name='image' type="file" class="form-control" required>
+										<div class="form-text text-danger">*Image Ratio Must Be 2:1</div>
 									</div>
 								</div>
 							</div>
