@@ -57,11 +57,15 @@ class HomeController extends Controller
 		$article = Article::where('slug', $slug)->with('modul')->first();
 		if(!$article) abort(404);
 
-		Viewers::create([
-			'id_article' => $article->id,
-			'ip' => request()->ip(),
-		]);
-
+		// check if ip is not exist
+		$ip = request()->ip();
+		$check = Viewers::where('ip', $ip)->where('id_article', $article->id)->first();
+		if(!$check) {
+			Viewers::create([
+				'ip' => $ip,
+				'id_article' => $article->id,
+			]);
+		}
 	 	return Inertia::render('Read', [
 			'title' => $article->title,
 			'article' => $article,
