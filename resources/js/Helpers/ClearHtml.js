@@ -1,5 +1,5 @@
 const ClearHtml = (html) => {
-	return html.replace(/(<([^>]+)>)/ig, '').substring(0, 90) + '...';
+	return html.replace(/(<([^>]+)>)/ig, '').substring(0, 95) + '...';
 }
 
 export default ClearHtml;

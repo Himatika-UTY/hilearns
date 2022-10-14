@@ -14,7 +14,7 @@ const RecommendList = ({ recommends }) => {
 									</div>
 									<div className="tutorial-desc">
 										<span className="font-weight-bolder tutorial-title text-default">{recommend.modul.name}</span>
-											<p className="tutorial-desc-sm">{recommend.modul.description.substring(0,50) + '...'}</p>
+											<p className="tutorial-desc-sm">{recommend.modul.description.substring(0,55) + '...'}</p>
 									</div>
 								</div>
 							</div>
