@@ -7,6 +7,7 @@ import Features from "../Components/Features";
 import '../Components/Styles/tutorial.css';
 import BannerImg from '../Assets/Img/Banner2.svg'
 import { Link } from "@inertiajs/inertia-react";
+import error from "../Assets/Img/error3.png";
 
 const Home = (props) => {
 	return (
@@ -141,13 +142,22 @@ const Home = (props) => {
 
 				<section className="section section-lg mt-5">
 					<div className="container-fluid">
-						<div className="row justify-content-center">
-							<div className="col-lg-12 bg-gradient-warning shadow p-5" style={{ borderRadius: '10px' }}>
-								<h2 className="text-center text-white font-weight-bold">
-									<i className="fa fa-exclamation-circle mr-2"></i>
-									Menemukan Bug Atau Error?
-								</h2>
-								<p className="text-center text-white font-weight-300">Dikarenakan Website Masih Dalam Tahap Pengembangan, Maka Jika kamu menemukan bug atau error pada website ini, silahkan laporkan pada kami. Kami akan segera memperbaikinya.</p>
+						<div className="row">
+							<div className="col-lg-12 bg-default2 py-4 px-5" style={{ borderRadius: '10px' }}>
+								<div className="under-construction-flex mt-2 mb-2">
+									<div className="w-auto">
+										<img src={error} alt="Responsive image" className="rounded under-construction-image" />
+									</div>
+									<div className="under-construction">
+										<h2 className="text-white font-weight-bold">
+											Pemberitahuan
+										</h2>
+										<p className="text-white font-weight-300">Dikarenakan website masih dalam tahap pengembangan, maka jika kamu menemukan bug atau error pada website ini, silahkan laporkan pada kami. Kami akan segera memperbaikinya.</p>
+										<a href='#' className='btn btn-sm px-4 p-2 btn-white text-default text-capitalize font-weight-bolder mb-1'>
+											<i className="fa fa-share mr-2" aria-hidden="true"></i>
+											Laporkan</a>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>

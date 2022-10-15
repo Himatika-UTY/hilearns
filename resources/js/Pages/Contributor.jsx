@@ -46,7 +46,10 @@ const Contributor = ({ contributors }) => {
 										<h2 className="text-white font-weight-bold">
 											Ingin Namamu Ada Disini?
 										</h2>
-										<p className="text-white font-weight-300">Ayo segera kontak kami dan segera berkontribusi di Hilearn</p>
+										<p className="text-white font-weight-300">Ayo segera kontak kami dan berkontribusi di Hilearn</p>
+										<a href='#' className='btn btn-sm px-4 p-2 btn-white text-default text-capitalize font-weight-bolder mb-1'>
+											<i className="fa fa-paper-plane mr-2" aria-hidden="true"></i>
+											Contact</a>
 									</div>
 								</div>
 							</div>

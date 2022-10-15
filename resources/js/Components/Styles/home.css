@@ -19,3 +19,38 @@
     min-height: 420px;
   }
 }
+
+.under-construction {
+	width: 60%;
+	margin-left: 30px;
+}
+
+.under-construction-flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.under-construction-image {
+  width: 140px;
+}
+
+@media screen and (max-width: 1448px) {
+	.under-construction {
+		margin-left: 50px;
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.under-construction {
+		width: 100%;
+		margin-left: 0px;
+		margin-top: 20px;
+		text-align: center;
+	}
+
+	.under-construction-flex {
+		flex-direction: column;
+	}
+}
