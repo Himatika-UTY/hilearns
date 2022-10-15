@@ -155,7 +155,8 @@ const Home = (props) => {
 										<p className="text-white font-weight-300">Dikarenakan website masih dalam tahap pengembangan, maka jika kamu menemukan bug atau error pada website ini, silahkan laporkan pada kami. Kami akan segera memperbaikinya.</p>
 										<a href='#' className='btn btn-sm px-4 p-2 btn-white text-default text-capitalize font-weight-bolder mb-1'>
 											<i className="fa fa-share mr-2" aria-hidden="true"></i>
-											Laporkan</a>
+											Laporkan
+										</a>
 									</div>
 								</div>
 							</div>
