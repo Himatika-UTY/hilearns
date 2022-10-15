@@ -22,7 +22,7 @@ const ShowArticle = (data) => {
    return (
       data && data.map((article, i) =>
 			<div key={i} className="col-lg-4 mt-4">
-            <div className="card shadow border-0 card-style">
+            <div className="card shadow border-0 card-style" style={{ minHeight: '410px' }}>
                <div className="card-body py-1">
                   <Link href={route('read', article.slug)}>
                      <div className="card-cover">
