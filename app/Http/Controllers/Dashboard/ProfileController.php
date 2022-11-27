@@ -27,7 +27,7 @@ class ProfileController extends Controller
         $jwt = AuthController::getJWT();
         $response = Http::put('https://dash.api.himatikauty.com/api/pengurus/'.$jwt->nim, [
             'nim' => $jwt->nim,
-            'nama' => $jwt->name,
+            'nama' => $jwt->nama,
             'angkatan' => $jwt->angkatan,
             'password' => $request->password,
             'id_divisi' => $jwt->divisi,
