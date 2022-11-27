@@ -34,8 +34,6 @@ class AuthController extends Controller
             'password' => $credentials['password'],
         ])->json();
 
-        dd($response);
-
         if($response['success'] == true) {
             if($response['data']['role'] == 'Admin' || $response['data']['role'] == 'Member') {
                 $payload = [
