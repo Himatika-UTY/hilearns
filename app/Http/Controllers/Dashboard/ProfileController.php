@@ -25,9 +25,9 @@ class ProfileController extends Controller
         ]);
 
         $jwt = AuthController::getJWT();
-        $response = Http::put('https://dash.api.himatikauty.com/api/pengurus/'.$jwt->username, [
-            'nim' => $jwt->username,
-            'nama' => $jwt->fullname,
+        $response = Http::put('https://dash.api.himatikauty.com/api/pengurus/'.$jwt->nim, [
+            'nim' => $jwt->nim,
+            'nama' => $jwt->name,
             'angkatan' => $jwt->angkatan,
             'password' => $request->password,
             'id_divisi' => $jwt->divisi,
@@ -35,7 +35,7 @@ class ProfileController extends Controller
 
         if($response['success'] == true) {
             IsChangePassword::create([
-                'npm' => $jwt->username,
+                'npm' => $jwt->nim,
                 'status' => true,
             ]);
 

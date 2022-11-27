@@ -37,8 +37,8 @@ class AuthController extends Controller
         if($response['success'] == true) {
             if($response['data']['role'] == 'Admin' || $response['data']['role'] == 'Member') {
                 $payload = [
-                    'nim' => $response['data']['nim'],
-                    'fullname' => $response['data']['nama'],
+                    'nim' => $credentials['username'],
+                    'nama' => $response['data']['nama'],
                     'role' => $response['data']['role'],
                     'angkatan' => $response['data']['angkatan'],
                     'divisi' => $response['data']['divisi'],

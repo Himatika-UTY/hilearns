@@ -18,14 +18,14 @@ class DashboardController extends Controller
       $jwt = AuthController::getJWT();
       return view('dashboard.index', [
          'title' => 'Dashboard',
-         'isChangePassword' => IsChangePassword::where('npm', AuthController::getJWT()->username)->first(),
+         'isChangePassword' => IsChangePassword::where('npm', AuthController::getJWT()->nim)->first(),
          'total_viewers' => Viewers::with('article')->whereHas('article', function ($query) use ($jwt) {
-            $query->where('author', $jwt->fullname);
+            $query->where('author', $jwt->nama);
          })->get(),
          'today_viewers' => Viewers::with('article')->whereHas('article', function ($query) use ($jwt) {
-            $query->where('author', $jwt->fullname);
+            $query->where('author', $jwt->nama);
          })->whereDate('created_at', date('Y-m-d'))->get(),
-         'total_article' => Article::where('author', $jwt->fullname)->get(),
+         'total_article' => Article::where('author', $jwt->nama)->get(),
          'moduls' => Modul::with('category')->get(),
       ]);
    }

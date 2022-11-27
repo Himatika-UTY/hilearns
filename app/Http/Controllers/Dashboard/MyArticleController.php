@@ -18,7 +18,7 @@ class MyArticleController extends Controller
 		$jwt = AuthController::getJWT();
         return view('dashboard.myarticle.index', [
 			'title' => 'My Articles',
-			'articles' => Article::with('modul')->where('author', $jwt->fullname)->get(),
+			'articles' => Article::with('modul')->where('author', $jwt->nama)->get(),
 		]);
 	}
 
@@ -51,7 +51,7 @@ class MyArticleController extends Controller
             'id_modul' => $request->modul,
             'title' => $request->title,
             'slug' => Str::slug($request->title),
-            'author' => $jwt->fullname,
+            'author' => $jwt->nama,
             'topic' => implode(',', array_column(json_decode($request->topic), 'value')),
             'image' => $imageName,
             'content' => $request->content,
@@ -63,7 +63,7 @@ class MyArticleController extends Controller
     public function edit($id)
     {
 		$jwt = AuthController::getJWT();
-		$article = Article::where('id', $id)->where('author', $jwt->fullname)->first();
+		$article = Article::where('id', $id)->where('author', $jwt->nama)->first();
 		if(!$article) abort(404);
 
 		return view('dashboard.myarticle.edit', [
@@ -76,7 +76,7 @@ class MyArticleController extends Controller
     public function edit_save(Request $request, $id)
     {
        	$jwt = AuthController::getJWT();
-		$oldData = Article::where('id', $id)->where('author', $jwt->fullname)->first();
+		$oldData = Article::where('id', $id)->where('author', $jwt->name)->first();
 		if(!$oldData) abort(404);
 
         $rules_title = $request->title == $oldData->title ? 'required|string|max:255' : 'required|string|max:255|unique:articles,title';
@@ -103,7 +103,7 @@ class MyArticleController extends Controller
             'id_modul' => $request->modul,
             'title' => $request->title,
             'slug' => Str::slug($request->title),
-            'author' => $jwt->fullname,
+            'author' => $jwt->nama,
             'topic' => implode(',', array_column(json_decode($request->topic), 'value')),
             'image' => $imageName,
             'content' => $request->content,
@@ -115,7 +115,7 @@ class MyArticleController extends Controller
     public function destroy($id)
     {
 		$jwt = AuthController::getJWT();
-		$article = Article::where('id', $id)->where('author', $jwt->fullname)->first();
+		$article = Article::where('id', $id)->where('author', $jwt->nama)->first();
 		if(!$article) abort(404);
 		File::delete(public_path('upload/articles/' . $article->image));
         $article->delete();
