@@ -22,7 +22,7 @@ class ContributorController extends Controller
 	{
 		return view('dashboard.contributor.create', [
 			'title' => 'Contributors',
-			'pengurus' => Http::get('https://api.himatikauty.com/api/pengurus')->json(),
+			'pengurus' => Http::get('https://dash.api.himatikauty.com/api/pengurus')->json(),
 		]);
 	}
 

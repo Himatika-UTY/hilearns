@@ -29,7 +29,7 @@ class AuthController extends Controller
            'password' => 'required'
         ]);
 
-        $response = Http::post('https://api.himatikauty.com/api/auth', [
+        $response = Http::post('https://dash.api.himatikauty.com/api/auth', [
             'nim' => $credentials['username'],
             'password' => $credentials['password'],
         ])->json();
