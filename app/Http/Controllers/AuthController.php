@@ -29,16 +29,17 @@ class AuthController extends Controller
            'password' => 'required'
         ]);
 
-        $response = Http::post('https://dash.api.himatikauty.com/api/auth', [
+        $response = Http::post('https://api.himatikauty.com/api/auth/login', [
             'nim' => $credentials['username'],
             'password' => $credentials['password'],
         ])->json();
 
+        dd($response);
+
         if($response['success'] == true) {
             if($response['data']['role'] == 'Admin' || $response['data']['role'] == 'Member') {
                 $payload = [
-                    'id_user' => $response['data']['id_pengurus'],
-                    'username' => $credentials['username'],
+                    'nim' => $response['data']['nim'],
                     'fullname' => $response['data']['nama'],
                     'role' => $response['data']['role'],
                     'angkatan' => $response['data']['angkatan'],
