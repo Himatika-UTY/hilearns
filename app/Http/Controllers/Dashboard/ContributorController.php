@@ -20,9 +20,16 @@ class ContributorController extends Controller
 
 	public function create()
 	{
+		$pengurus = Http::withToken(session('api_token'))->get('https://api.himatikauty.com/api/pengurus')->json();
+		if($pengurus['code'] == 401) {
+			session()->forget('jwt');
+			session()->forget('api_token');
+			return redirect()->route('login')->with('error', 'Token expired, silahkan login kembali');
+		}
+
 		return view('dashboard.contributor.create', [
 			'title' => 'Contributors',
-			'pengurus' => Http::get('https://dash.api.himatikauty.com/api/pengurus')->json(),
+			'pengurus' => $pengurus,
 		]);
 	}
 

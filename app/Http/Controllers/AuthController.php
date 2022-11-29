@@ -37,7 +37,7 @@ class AuthController extends Controller
         if($response['success'] == true) {
             if($response['data']['role'] == 'Admin' || $response['data']['role'] == 'Member') {
                 $payload = [
-                    'nim' => $credentials['username'],
+                    'nim' => $response['data']['nim'],
                     'nama' => $response['data']['nama'],
                     'role' => $response['data']['role'],
                     'angkatan' => $response['data']['angkatan'],
@@ -46,6 +46,7 @@ class AuthController extends Controller
 
                 $jwt = JWT::encode($payload, env('JWT_KEY'), 'HS256');
                 $request->session()->put('jwt', $jwt);
+                $request->session()->put('api_token', $response['data']['token']);
                 
                 return redirect()->route('dashboard');
             } else return redirect()->route('login')->with('error', 'Anda tidak memiliki akses ke halaman ini');

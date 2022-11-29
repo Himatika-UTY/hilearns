@@ -21,7 +21,7 @@
 			</div>
 		@elseif ($message = Session::get('error'))
 			<div class="col-md-8">
-				<div class="alert alert-success text-white" style="border: none;" role="alert">
+				<div class="alert alert-danger text-white" style="border: none;" role="alert">
 					{{ $message }}
 				</div>
 			</div>
@@ -41,7 +41,7 @@
 								<div class="row">
 									<div class="col-md-6">
 										<div class="form-group">
-											<label>Password</label>
+											<label>New Password</label>
 											<div class="input-group mb-4">
 												<input class="form-control" name="password" type="password" required>
 											</div>
@@ -49,7 +49,7 @@
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
-											<label>Confirm Password</label>
+											<label>Confirm New Password</label>
 											<div class="input-group mb-4">
 												<input class="form-control" name="cnfrm_password" type="password" required>
 											</div>

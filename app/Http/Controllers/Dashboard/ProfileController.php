@@ -25,13 +25,15 @@ class ProfileController extends Controller
         ]);
 
         $jwt = AuthController::getJWT();
-        $response = Http::put('https://dash.api.himatikauty.com/api/pengurus/'.$jwt->nim, [
-            'nim' => $jwt->nim,
-            'nama' => $jwt->nama,
-            'angkatan' => $jwt->angkatan,
+        $response = Http::withToken(session('api_token'))->put('https://api.himatikauty.com/api/pengurus/'.$jwt->nim, [
             'password' => $request->password,
-            'id_divisi' => $jwt->divisi,
         ])->json();
+
+        if($response['code'] == 401) {
+			session()->forget('jwt');
+			session()->forget('api_token');
+			return redirect()->route('login')->with('error', 'Token expired, silahkan login kembali');
+		}
 
         if($response['success'] == true) {
             IsChangePassword::create([
@@ -40,7 +42,7 @@ class ProfileController extends Controller
             ]);
 
             return redirect()->route('profile')->with('success', 'Password berhasil diubah');
-        } else return redirect()->route('profile')->with('error', 'password gagal diubah');
+        } else return redirect()->route('profile')->with('error', 'Password gagal diubah');
 
         return redirect()->back()->with('success', 'Password Berhasil Diubah');
     }
