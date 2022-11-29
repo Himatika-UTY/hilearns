@@ -35,7 +35,7 @@ class AuthController extends Controller
         ])->json();
 
         if($response['success'] == true) {
-            if($response['data']['role'] == 'Admin' || $response['data']['role'] == 'Member') {
+            if($response['data']['role'] == 'Superadmin' ||$response['data']['role'] == 'Admin' || $response['data']['role'] == 'Member') {
                 $payload = [
                     'nim' => $response['data']['nim'],
                     'nama' => $response['data']['nama'],
