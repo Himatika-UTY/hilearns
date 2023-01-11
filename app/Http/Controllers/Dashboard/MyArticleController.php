@@ -76,7 +76,7 @@ class MyArticleController extends Controller
     public function edit_save(Request $request, $id)
     {
        	$jwt = AuthController::getJWT();
-		$oldData = Article::where('id', $id)->where('author', $jwt->name)->first();
+		$oldData = Article::where('id', $id)->where('author', $jwt->nama)->first();
 		if(!$oldData) abort(404);
 
         $rules_title = $request->title == $oldData->title ? 'required|string|max:255' : 'required|string|max:255|unique:articles,title';
