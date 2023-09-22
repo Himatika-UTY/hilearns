@@ -50,7 +50,7 @@ class AuthController extends Controller
                 
                 return redirect()->route('dashboard');
             } else return redirect()->route('login')->with('error', 'Anda tidak memiliki akses ke halaman ini');
-        } else return redirect()->route('login')->with('error', 'Username atau password salah');
+        } else return redirect()->route('login')->with('error', $response['messages']);
     }
 
     public function logout(Request $request)
