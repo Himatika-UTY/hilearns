@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title inertia>{{ config('app.name', 'Laravel') }}</title>
+		<link rel="icon" type="image/x-icon" href="{{ asset('/favicon.ico') }}">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
 		<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet" />
 		<base href="/">
@@ -18,6 +19,21 @@
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
 		<link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github-dark.min.css" rel="stylesheet" />
+
+		{{-- SEO TAGS --}}
+		<meta name="title" content="{{ env('APP_NAME') }}" />
+		<meta name="description" content="Hilearns adalah platform belajar pemograman online yang dikembangkan oleh Himatika UTY.">
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<meta content='Hilearns adalah platform belajar pemograman online yang dikembangkan oleh Himatika UTY.' name='keywords' />
+		<meta name="robots" content="index, follow"/>
+		<meta property="og:sitename" content="{{ env('APP_NAME') }}" />
+		<meta property="og:title" content="{{ env('APP_NAME') }}" />
+		<meta property="og:url" content="{{ env('APP_URL') }}" />
+		<meta property="og:description" content="Hilearns adalah platform belajar pemograman online yang dikembangkan oleh Himatika UTY.">
+		<meta property="og:image" content="https://himatikauty.or.id/logo_himatika.png">
+		<meta property="og:type" content="website" />
+		<meta property="og:locale" content="id_ID" />
+
 		<!-- Scripts -->
 		@routes
 		@viteReactRefresh
