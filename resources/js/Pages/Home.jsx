@@ -31,9 +31,9 @@ const Home = (props) => {
 							<div className="col px-0">
 								<div className="row">
 									<div className="col-md-7 position-relative banner">
-										<h1 className="display-1 text-white font-weight-900">HiLearns</h1>
+										<h1 className="display-1 text-white font-weight-900">Hilearnss</h1>
 										<p className="lead text-white">
-											HiLearn adalah platform pembelajaran online yang menyediakan berbagai macam tutorial untuk memudahkan kamu belajar pemrograman.
+											Hilearnss adalah platform pembelajaran online yang menyediakan berbagai macam tutorial untuk memudahkan kamu belajar pemrograman.
 										</p>
 										<div className="btn-wrapper">
 											<Link href={route('tutorial')} className="btn btn-white btn-icon mb-3 mb-sm-0">
@@ -90,7 +90,7 @@ const Home = (props) => {
 										<div className="w-100">
 											<span className="text-primary font-weight-900 text-white">KATEGORI</span><br/>
 											<span className="font-weight-900 display-4 text-white">Belajar materi sesuai minatmu</span><br/>
-											<p className="text-white">Lihat kategori materi yang kami miliki di HiLearn</p>
+											<p className="text-white">Lihat kategori materi yang kami miliki di Hilearns</p>
 										</div>
 										<ul className="list-unstyled">
 											<li className="py-2">
