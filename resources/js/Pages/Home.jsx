@@ -31,7 +31,7 @@ const Home = (props) => {
 							<div className="col px-0">
 								<div className="row">
 									<div className="col-md-7 position-relative banner">
-										<h1 className="display-1 text-white font-weight-900">HiLearn</h1>
+										<h1 className="display-1 text-white font-weight-900">HiLearns</h1>
 										<p className="lead text-white">
 											HiLearn adalah platform pembelajaran online yang menyediakan berbagai macam tutorial untuk memudahkan kamu belajar pemrograman.
 										</p>
