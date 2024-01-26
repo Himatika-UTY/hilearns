@@ -20,7 +20,7 @@ class ContributorController extends Controller
 
 	public function create()
 	{
-		$pengurus = Http::withToken(session('api_token'))->get('https://api.himatikauty.com/api/pengurus')->json();
+		$pengurus = Http::withToken(session('api_token'))->get('https://api.himatikauty.or.id/api/pengurus')->json();
 		if($pengurus['code'] == 401) {
 			session()->forget('jwt');
 			session()->forget('api_token');

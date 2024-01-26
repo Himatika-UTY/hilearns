@@ -25,7 +25,7 @@ class ProfileController extends Controller
         ]);
 
         $jwt = AuthController::getJWT();
-        $response = Http::withToken(session('api_token'))->put('https://api.himatikauty.com/api/pengurus/'.$jwt->nim, [
+        $response = Http::withToken(session('api_token'))->put('https://api.himatikauty.or.id/api/pengurus/'.$jwt->nim, [
             'password' => $request->password,
         ])->json();
 
